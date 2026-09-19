@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050b1c;
+  --foreground: #eef3ff;
+
+  /* Explo-Gen brand palette — placeholder until the official logo/brand
+     kit is supplied; swap the hex values here and everything downstream
+     (confetti excluded, see lib/confetti.ts) follows. */
+  --color-brand-navy: #050b1c;
+  --color-brand-navy-soft: #0a1a3c;
+  --color-brand-blue: #1e4fd8;
+  --color-brand-blue-bright: #3b6bff;
+  --color-brand-light-blue: #8fb8ff;
+  --color-brand-white: #ffffff;
+  --color-brand-mist: #c9d7f5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-navy: var(--color-brand-navy);
+  --color-brand-navy-soft: var(--color-brand-navy-soft);
+  --color-brand-blue: var(--color-brand-blue);
+  --color-brand-blue-bright: var(--color-brand-blue-bright);
+  --color-brand-light-blue: var(--color-brand-light-blue);
+  --color-brand-white: var(--color-brand-white);
+  --color-brand-mist: var(--color-brand-mist);
+  --font-display: var(--font-manrope);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  overscroll-behavior: none;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
