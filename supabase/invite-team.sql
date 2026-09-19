@@ -10,7 +10,7 @@
 -- five right now).
 
 with meeting as (
-  select 'Monday'::text as meeting_date, '8:00 PM'::text as meeting_time
+  select 'Tuesday'::text as meeting_date, '8:00 PM'::text as meeting_time
 ),
 message as (
   select $msg$Throughout our conversations, we were impressed by what you bring to the table. Your skills, perspective, and ambition stood out to us, and we believe you can play a meaningful role in what we're building.$msg$::text as personal_message

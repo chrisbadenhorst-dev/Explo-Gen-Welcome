@@ -37,7 +37,7 @@ function createDemoStore(): Map<string, DemoInvitation> {
         role: "Co-Founder",
         personalMessage:
           "Throughout our conversations, we were impressed by what you bring to the table. Your skills, perspective, and ambition stood out to us, and we believe you can play a meaningful role in what we're building.",
-        meetingDate: "Monday",
+        meetingDate: "Tuesday",
         meetingTime: "8:00 PM",
         status: "pending",
         openedAt: null,

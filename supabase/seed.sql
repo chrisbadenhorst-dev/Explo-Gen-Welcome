@@ -11,7 +11,7 @@ insert into invitations (applicant_id, token, meeting_date, meeting_time, person
 select
   id,
   'demo-john',
-  'Monday',
+  'Tuesday',
   '8:00 PM',
   'Throughout our conversations, we were impressed by what you bring to the table. Your skills, perspective, and ambition stood out to us, and we believe you can play a meaningful role in what we''re building.',
   'pending'

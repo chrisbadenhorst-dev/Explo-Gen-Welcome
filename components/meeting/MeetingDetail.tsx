@@ -1,4 +1,4 @@
-import { TEAMS_MEETING_LINK } from "@/lib/constants";
+import { TEAMS_MEETING_LINK, WHATSAPP_GROUP_LINK } from "@/lib/constants";
 
 interface MeetingDetailProps {
   meetingDate: string;
@@ -40,6 +40,24 @@ export function MeetingDetail({ meetingDate, meetingTime }: MeetingDetailProps) 
           />
         </svg>
         Join via Microsoft Teams
+      </a>
+
+      <a
+        href={WHATSAPP_GROUP_LINK}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 rounded-full border border-brand-light-blue/30 bg-brand-light-blue/10 px-4 py-2 text-xs font-medium tracking-wide text-brand-light-blue transition-colors hover:border-brand-light-blue/50 hover:bg-brand-light-blue/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light-blue focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
+      >
+        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20Z"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        Join the WhatsApp group
       </a>
     </div>
   );
